@@ -32,7 +32,9 @@ export function ProductProvider({ children }) {
   // bir kategoriye ait urunleri gormek istiyorsak > /products/category/jewelery
   //!3, Saglayici fonsiyonlari mutlaka Provider'i return etmeli ve App'i sarmalamali
   return (
-    <ProductContext.Provider value={{ products, setSelectedCategory }}>
+    <ProductContext.Provider
+      value={{ products, setSelectedCategory, selectedCategory }}
+    >
       {children}
     </ProductContext.Provider>
   );
